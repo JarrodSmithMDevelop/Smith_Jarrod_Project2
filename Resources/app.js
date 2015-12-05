@@ -1,19 +1,21 @@
 //Set background color 
-//Ti.UI.setBackgroundColor("#999");
+Ti.UI.setBackgroundColor("#999");
 
 //Create main window
-var mainWindow = Ti.UI.createWindow();
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor: "white"
+});
 
 //Tite bar view 
 var titleBarView = Ti.UI.createView({
-	height: 20,
-	background: "#d9e6f2",
+	height: 50,
+	backgroundColor: "#d9e6f2",
 	top: 20
 });
 
 //Title bar text
 var titleBarText = Ti.UI.createLabel({
-	text: "Samsung Devices",
+	text: "Mobile Devices of 2015",
 	style: "bold",
 	top: 20
 });
