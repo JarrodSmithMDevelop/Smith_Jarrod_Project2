@@ -34,6 +34,69 @@ if(Ti.Platform === "iPhone OS"){
 	devices.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
 };
 
+	var specs = function(){ 
+		var specWindow = Ti.UI.createWindow({
+			backgroundColor: "#333"
+			});
+		
+		//Tite bar view 
+		var specTitleBarView = Ti.UI.createView({
+			height: 50,
+			backgroundColor: "#d9e6f2",
+			top: 20
+		});
+		
+		//Title bar text
+		var specTitleBarText = Ti.UI.createLabel({
+			text: this.title,
+			color: "#000",
+			style: "bold",
+			top: 40
+		});
+		
+		//Border for bottom of the title bar
+		var specTitleViewBorder = Ti.UI.createView({
+			backgroundColor: "#002699",
+			height: 1,
+			top: titleBarView.height + titleBarView.top
+		});
+		
+		var backButton = Ti.UI.createView({
+			backgroundColor: "#d9e6f2",
+			width: 100,
+			height: 50,
+			bottom: 15,
+			left: 15
+		});
+		
+		var backButtonLabel = Ti.UI.createLabel({
+			text: "Back",
+			fontSize: 14,
+			fontFamily: "Ariel"
+		});
+				
+				
+				var specifics = Ti.UI.createLabel({
+					 text: this.internMem,
+					 color: "white",
+					 top: specTitleViewBorder + 20
+				});
+				
+				var returnHome = function(){
+				specWindow.close();
+			};
+				
+		specWindow.add(nameRow);
+		backButton.addEventListener("click", returnHome);
+		backButton.add(backButtonLabel);
+		specTitleBarView.add(specTitleBarText);
+		specWindow.add(specTitleBarView, specTitleBarText, specTitleViewBorder, backButton, specifics);
+		specWindow.open();
+		
+
+	};
+
+
 //Create table section views for phones
 var phoneSection = Ti.UI.createTableViewSection({
 	headerTitle: "Top Phones of 2015",
@@ -54,30 +117,44 @@ var wareableSection = Ti.UI.createTableViewSection({
 
 //Loops to display information from arrays.
 for(var i=0, j=phone.length; i<j; i++){
-	var phoneNameRow = Ti.UI.createTableViewRow({
+	var nameRow = Ti.UI.createTableViewRow({
 		title: phone[i].name,
+		internMem: phone[i].InternalMemory,
 		hasChild: true
 	});
-	phoneSection.add(phoneNameRow);
+	
+	
+	phoneSection.add(nameRow);
+	nameRow.addEventListener("click", specs);
 };
 
+//Loops through tablet array
 for(var i=0, j=tablet.length; i<j; i++){
-	var tabletNameRow = Ti.UI.createTableViewRow({
+	var nameRow = Ti.UI.createTableViewRow({
 		title: tablet[i].name,
 		hasChild: true
 	});
-	tabletSection.add(tabletNameRow);
+	tabletSection.add(nameRow);
+	nameRow.addEventListener("click", specs);
 };
 
-for(var i=0, j=wearable.length; i<j; i++){
-	var wearableNameRow = Ti.UI.createTableViewRow({
-		title: wearable[i].name,
+//To loop through wearables array
+for(var i=0, j=phone.length; i<j; i++){
+	var nameRow = Ti.UI.createTableViewRow({
+		title: phone[i].name,
 		hasChild: true
 	});
-	wareableSection.add(wearableNameRow);
+		
+	wareableSection.add(nameRow);
+	nameRow.addEventListener("click", specs);
 };
-var techSection = [phoneSection, tabletSection, wareableSection];
 
+
+
+
+//Collects all section views
+var techSection = [phoneSection, tabletSection, wareableSection];
+//Sends section views to table
 devices.setData(techSection);
 
 mainWindow.add(devices);
