@@ -1,5 +1,5 @@
 
-12/5/2015, 11:40:21 AM
+12/5/2015, 5:10:27 PM
 
 Operating System
   Name                        = Mac OS X
@@ -21,7 +21,7 @@ Titanium SDK
   Target Platform             = iphone
 
 Command
-  /usr/local/bin/node /Users/JarrodSmith/.appcelerator/install/5.1.0/package/node_modules/appc-cli-titanium/node_modules/titanium/bin/titanium build --platform ios --log-level trace --sdk 5.1.1.GA --project-dir /Users/JarrodSmith/GitHub/Smith_Jarrod_Visualframeworks/Smith_Jarrod_Project2 --target simulator --ios-version 9.1 --device-family iphone --sim-type iphone --sim-version 9.1 --device-id 4CEBAE54-9A9A-435D-BD74-8DAA9E3D15EC --skip-js-minify --liveview --deploy-type development --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 49395 --plugin-paths /Users/JarrodSmith/.appcelerator/install/5.1.0/package/node_modules --config-file /var/folders/zk/r7vy3c8503792qfczh43dhfw0000gn/T/build-1449337218751.json --no-banner
+  /usr/local/bin/node /Users/JarrodSmith/.appcelerator/install/5.1.0/package/node_modules/appc-cli-titanium/node_modules/titanium/bin/titanium build --platform ios --log-level trace --sdk 5.1.1.GA --project-dir /Users/JarrodSmith/GitHub/Smith_Jarrod_Visualframeworks/Smith_Jarrod_Project2 --target simulator --ios-version 9.1 --device-family iphone --sim-type iphone --sim-version 9.1 --device-id 4CEBAE54-9A9A-435D-BD74-8DAA9E3D15EC --skip-js-minify --liveview --deploy-type development --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 49395 --plugin-paths /Users/JarrodSmith/.appcelerator/install/5.1.0/package/node_modules --config-file /var/folders/zk/r7vy3c8503792qfczh43dhfw0000gn/T/build-1449357024999.json --no-banner
 
 [TRACE]  [ioslib] Validating iOS Simulator UDID 4CEBAE54-9A9A-435D-BD74-8DAA9E3D15EC
 [TRACE]  [ioslib] Found iOS Simulator UDID 4CEBAE54-9A9A-435D-BD74-8DAA9E3D15EC
@@ -62,7 +62,7 @@ Command
 [INFO]   Initializing the build directory
 [TRACE]  offline build file /var/folders/zk/r7vy3c8503792qfczh43dhfw0000gn/T/build-58d8f2116ffd00ca9d62bc125349a90f601e53a6.json
 [TRACE]  online 1
-[TRACE]  optimizing build, last build was 39974.306 sec ago
+[TRACE]  optimizing build, last build was 59780.267 sec ago
 [INFO]   Creating Xcode project
 [TRACE]  Removing pre-compile phase
 [TRACE]  No native module libraries to add
@@ -140,13 +140,13 @@ Command
 [INFO]   Removing files
 [DEBUG]  Removing empty directories
 [INFO]   Skipping xcodebuild
-[INFO]   Finished building the application in 1s 590ms
+[INFO]   Finished building the application in 1s 158ms
 [INFO]   Launching iOS Simulator
 [TRACE]  [ioslib] Selected iOS Simulator: iPhone 5
 [TRACE]  [ioslib]   UDID    = 4CEBAE54-9A9A-435D-BD74-8DAA9E3D15EC
 [TRACE]  [ioslib]   iOS     = 9.1
 [TRACE]  [ioslib] Autoselected Xcode: 7.1.1
-[TRACE]  [ioslib] Removing old log file: /Users/JarrodSmith/Library/Developer/CoreSimulator/Devices/4CEBAE54-9A9A-435D-BD74-8DAA9E3D15EC/data/Containers/Data/Application/1A8040D8-25F7-4481-AF07-4B4756FA144C/Documents/cc13985a-6c71-4814-9111-45ca7ef0e035.log
+[TRACE]  [ioslib] Removing old log file: /Users/JarrodSmith/Library/Developer/CoreSimulator/Devices/4CEBAE54-9A9A-435D-BD74-8DAA9E3D15EC/data/Containers/Data/Application/4B701740-C6C2-4BC2-9052-8BD06DFF7ED4/Documents/cc13985a-6c71-4814-9111-45ca7ef0e035.log
 [TRACE]  [ioslib] iPhone 5 Simulator already running with the correct udid
 [TRACE]  [ioslib] Tailing iPhone 5 Simulator system log: /Users/JarrodSmith/Library/Logs/CoreSimulator/4CEBAE54-9A9A-435D-BD74-8DAA9E3D15EC/system.log
 [TRACE]  [ioslib] Running: osascript "/Users/JarrodSmith/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/node_modules/ioslib/lib/sim_focus.scpt" "Simulator"
@@ -155,5 +155,5 @@ Command
 [TRACE]  [ioslib] App installed
 [TRACE]  [ioslib] Running: /Applications/Xcode.app/Contents/Developer/usr/bin/simctl launch 4CEBAE54-9A9A-435D-BD74-8DAA9E3D15EC com.tables
 [TRACE]  [ioslib] App launched
+[TRACE]  [ioslib] Found application log file: /Users/JarrodSmith/Library/Developer/CoreSimulator/Devices/4CEBAE54-9A9A-435D-BD74-8DAA9E3D15EC/data/Containers/Data/Application/803AA088-11A4-43A9-9B2F-97D50CA0CBC9/Documents/cc13985a-6c71-4814-9111-45ca7ef0e035.log
 [TRACE]  [Smith_Jarrod_Project2] assertion failed: 15B42 13B137: libxpc.dylib + 71730 [D938B614-A290-3D25-8032-8DEF8A01913A]: 0x7d
-[TRACE]  [ioslib] Found application log file: /Users/JarrodSmith/Library/Developer/CoreSimulator/Devices/4CEBAE54-9A9A-435D-BD74-8DAA9E3D15EC/data/Containers/Data/Application/FE83494D-F712-4C3B-BAD3-7ABF828935B1/Documents/cc13985a-6c71-4814-9111-45ca7ef0e035.log
