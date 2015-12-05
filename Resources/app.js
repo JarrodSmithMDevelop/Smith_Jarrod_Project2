@@ -20,13 +20,27 @@ var titleBarText = Ti.UI.createLabel({
 	top: 20
 });
 
-//Open main window 
-mainWindow.open();
+//Border for bottom of the title bar
+var titleViewBorder = Ti.UI.createView({
+	backgroundColor: "#002699",
+	height: 1,
+	top: titleBarView.height + titleBarView.top
+});
+
+//Requiring other js files 
+var tables = require("tables");
+
 
 //Added text to title bar view
 titleBarView.add(titleBarText);
 
 //Added title bar to main window
-mainWindow.add(titleBarView);
+mainWindow.add(titleBarView, titleViewBorder);
+
+//Open main window 
+mainWindow.open();
+
+
+
 
 
